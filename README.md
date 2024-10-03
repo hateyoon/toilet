@@ -8,3 +8,8 @@
 지금까지 공공화장실 api를 사용할려고 사설사이트 api로 시도했다가 한달에 50달러 내라해서 방향을 전환하여 
 경기데이터드림(https://data.gg.go.kr/portal/mainPage.do)의 공공api를 사용하여서  
 현재 내가 원하는 방향인 api를 따와서 streamlit을 이용 간단한 웹사이트에 보여주는 방법을 성공시켰다
+
+
+
+<img width="835" alt="스크린샷 2024-10-04 오전 2 05 01" src="https://github.com/user-attachments/assets/821d4b9a-481d-4b79-8ffb-62f9acfc977d">
+간단하게 내가 원하는 위치정보와 이름 등을 따올 수 있게 구현하였다.
