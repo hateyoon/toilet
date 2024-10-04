@@ -6,5 +6,5 @@
 
 
 
-https://github.com/hateyoon/toilet/blob/main/Computer%20Architecture/컴퓨터구조기초.md
+https://github.com/hateyoon/nodework/blob/main/Computer%20Architecture/컴퓨터구조기초.md
 
