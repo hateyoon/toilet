@@ -6,8 +6,5 @@
 
 
 
-- [컴퓨터 구조 기초](https://github.com/내-사용자명/내-리포지토리명/blob/main/Computer%20Architecture/컴퓨터구조기초.md)
+https://github.com/hateyoon/toilet/blob/main/Computer%20Architecture/컴퓨터구조기초.md
 
-
-
-https://github.com/내-사용자명/내-리포지토리명/blob/main/Computer%20Architecture/컴퓨터구조기초.md
