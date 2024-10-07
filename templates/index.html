@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공중 화장실 지도</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI-3_cR5yij1lPGrDYz4fijMwNHotF6ds"></script>
+    <script>
+        // Flask에서 전송된 화장실 데이터를 JSON 형식으로 가져옵니다.
+        const toiletData = {{ toilets | tojson }};
+        
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 37.5665, lng: 126.978 },
+                zoom: 12
+            });
+
+            // 모든 화장실 마커 표시
+            toiletData.forEach(toilet => {
+                new google.maps.Marker({
+                    position: { lat: parseFloat(toilet.latitude), lng: parseFloat(toilet.longitude) },
+                    map: map,
+                    title: toilet.name
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>공중 화장실 지도</h1>
+    <div id="map" style="height: 600px;"></div>
+    <script>window.onload = initMap;</script>
+</body>
+</html>
