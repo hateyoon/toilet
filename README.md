@@ -64,3 +64,9 @@
 
 
 
+10.7일 
+<img width="560" alt="스크린샷 2024-10-07 오후 5 40 28" src="https://github.com/user-attachments/assets/c19bbb0d-1ca3-4097-a895-c4d66e3e599e">
+구글 api에 경기도 화장실 api를 연결하여서 마킹에 성공하였다
+경기도 api를 사용한 이유는 서울화장실 데이터는 etc값으로 되어 있고 api로 존재하지 않아서 경기도로 변경하였다.
+
+
