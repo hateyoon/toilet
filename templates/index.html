@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>화장실 위치 지도</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI-3_cR5yij1lPGrDYz4fijMwNHotF6ds&callback=initMap" async defer></script>
-    <script src="static/index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI-3_cR5yij1lPGrDYz4fijMwNHotF6ds" async defer></script>
 </head>
 <body>
     <h1>화장실 위치 지도</h1>
     <div id="map" style="height: 500px; width: 100%;"></div>
+    <script>let map;
+
+        function initMap() {
+            const center = { lat: 37.6569377884, lng: 126.7718356549 }; // 기본 중심 좌표
+        
+            map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: center,
+            });
+        
+            fetch('/toilets')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data); // 데이터 확인
+                    data.forEach(toilet => {
+                        const marker = new google.maps.Marker({
+                            position: { lat: Number(toilet.REFINE_WGS84_LAT) , lng: Number(toilet.REFINE_WGS84_LOGT) },
+                            map: map,
+                            title: toilet.PBCTLT_PLC_NM,
+                        });
+                    });
+                })
+                .catch(error => console.error('Error fetching toilet data:', error));
+        }
+initMap()
+        </script>
 </body>
+
 </html>
